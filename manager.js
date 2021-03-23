@@ -41,6 +41,8 @@ exports.AppsManager = class AppsManager {
     }
 
     app.close();
+
+    this.apps.delete(port);
   }
 };
 
