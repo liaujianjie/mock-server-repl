@@ -25,17 +25,17 @@ exports.AppsManager = class AppsManager {
         path: req.path,
       });
     });
-    app.listen(port, () => {
+    const server = app.listen(port, () => {
       // Don't log here because it is async and prints ugly :-(
       // console.log(`Listening on port ${port}.`);
     });
-    this.apps.set(port, app);
+    this.apps.set(port, server);
   }
 
   killApp(port) {
     validatePort(port);
 
-    const app = getApp(port);
+    const app = this.getApp(port);
     if (!app) {
       throw new Error(`Not listening on port ${port}.`);
     }

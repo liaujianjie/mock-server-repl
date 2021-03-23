@@ -1,0 +1,14 @@
+{
+  "name": "mock-server-repl",
+  "version": "1.0.0",
+  "description": "REPL app to quickly create express apps for debugging load balancing.",
+  "main": "index.js",
+  "author": "Liau Jian Jie",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "node ."
+  }
+}
